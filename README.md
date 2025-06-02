@@ -1,30 +1,100 @@
-# ⏱️ Timer Challenge Game - Refs & Portals in React
+# ⏱️ Timer Challenge Game - Refs & Portals en React
 
-Este proyecto es parte de una sección avanzada del curso de React de Maximilian Schwarzmüller. Está diseñado para practicar y comprender el uso de **Refs** y **Portals** en React, junto con conceptos como el manejo de estado, componentes personalizados y renderizado condicional.
+Un proyecto práctico diseñado para profundizar en conceptos avanzados de **React**, como el uso de **Refs** y **Portals**, mediante la creación de un pequeño juego de precisión con temporizador.
 
-## 🎮 Descripción
+---
 
-"Timer Challenge Game" es un pequeño juego donde el usuario debe detener un temporizador **lo más cerca posible del momento en que este expire**, sin dejar que llegue a cero.
+## 🎮 Descripción del Juego
 
-Se trata de un ejercicio práctico que combina lógica de temporizador, control del DOM a través de Refs, y uso de Portales para renderizar un modal fuera del árbol principal del componente.
+"Timer Challenge Game" es un mini juego donde el objetivo es detener un temporizador **tan cerca como sea posible del tiempo límite**, sin dejar que llegue a cero. Se trata de un ejercicio que integra lógica de temporización, manejo de referencias al DOM y renderizado condicional con portales.
 
-## 🚀 Funcionalidades
+---
 
-- Iniciar y detener un temporizador con precisión.
-- Detectar si el usuario ganó o perdió según el momento de detención.
-- Mostrar un **modal de resultados** usando Portales.
-- Medir el tiempo restante usando `setInterval` para mayor precisión.
-- Acceso directo a elementos del DOM con `useRef`.
-- Evitar estados innecesarios utilizando referencias en lugar de `useState` en ciertos casos.
+## 🚀 Funcionalidades Clave
 
-## 🧠 Conceptos de React aplicados
+* ⏱️ Iniciar y detener un temporizador con alta precisión.
+* ✅ Evaluar el resultado del jugador según el tiempo de reacción.
+* 📤 Mostrar resultados en un modal renderizado fuera del árbol principal mediante **Portals**.
+* 🧮 Medición del tiempo restante usando `setInterval` para mejor exactitud.
+* 🎯 Acceso directo al DOM a través de `useRef`.
+* 🧼 Evita renderizados innecesarios gracias al uso de referencias en lugar de estados.
 
-- `useRef` para:
-  - Controlar acceso directo al DOM.
-  - Almacenar referencias a `setInterval`.
-  - Controlar métodos imperativos entre componentes.
-- `createPortal` para:
-  - Renderizar el componente `ResultModal` fuera del DOM principal.
-- `setInterval` vs `setTimeout` para lógica precisa del temporizador.
-- `useEffect` y limpieza de efectos para detener correctamente el temporizador.
-- Componentes controlados vs no controlados.
+---
+
+## 🧠 Conceptos de React Aplicados
+
+* **`useRef`** para:
+
+  * Referenciar elementos DOM.
+  * Controlar intervalos de tiempo (`setInterval`).
+  * Implementar métodos imperativos entre componentes.
+* **`createPortal`** para:
+
+  * Renderizar el componente `ResultModal` fuera del contenedor padre principal.
+* Comparativa entre **`setInterval`** y **`setTimeout`** para precisión temporal.
+* Uso adecuado de **`useEffect`** con funciones de limpieza para evitar fugas de memoria.
+* Diferencias entre **componentes controlados y no controlados**.
+
+---
+
+## 🧪 Cómo Probar el Proyecto
+
+1. Clona este repositorio:
+
+```bash
+git clone https://github.com/tu-usuario/timer-challenge-game.git
+cd timer-challenge-game
+```
+
+2. Instala dependencias:
+
+```bash
+npm install
+```
+
+3. Ejecuta el servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+Abre `http://localhost:5173` en tu navegador para comenzar.
+
+---
+
+## 📁 Estructura del Proyecto
+
+```
+timer-challenge-game/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── TimerChallenge.jsx
+│   │   └── ResultModal.jsx
+│   ├── App.jsx
+│   └── main.jsx
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+---
+
+## 🧩 Tecnologías Usadas
+
+* React 18+
+* Vite
+* JavaScript (ES6+)
+* CSS Modules / Tailwind opcional
+
+---
+
+## 📬 Contacto
+
+* Email: [diegoguerrero@umariana.edu.co](mailto:diegoguerrero@umariana.edu.co)
+* LinkedIn: [Diego Guerrero](https://www.linkedin.com/in/diego-guerrero-dev)
+* GitHub: [@Diego-9612](https://github.com/Diego-9612)
+
+---
+
+> Este proyecto es parte de un entrenamiento práctico en técnicas avanzadas de React para mejorar la interacción con el DOM, el control del renderizado y la arquitectura de componentes complejos.
